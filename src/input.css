@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* یک نام عمومی برای خانواده فونت */
+    src: url('../assets/fonts/WOFF2/IRANSansX-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* وزن متناظر با این فایل فونت */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Bold.woff2') format('woff2');
+    font-weight: 700;
+    /* وزن متناظر با این فایل فونت */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansXFaRegularNum';
+    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansXFaBoldNum';
+    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@theme {
+    --font-normal: "IRANSansX", "sans-serif";
+
+}
+
+:root {
+
+    --font-regular-num: "IRANSansXFaRegularNum";
+    --font-bold-num: "IRANSansXFaBoldNum";
+}
+
+.fa-num-regular {
+    font-family: var(--font-regular-num);
+}
+
+.fa-num-bold {
+    font-family: var(--font-bold-num);
+}
+
+body {
+    background-color: #dbdbdb;
+    font-family: var(--font-normal);
+    direction: rtl;
+
+    padding: 10px;
+    overflow: auto;
+}
+
+* {
+    border-color: #c0c0c0;
+}
