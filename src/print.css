@@ -11,18 +11,21 @@ body {
 }
 
 .print-a4-container {
-    width: 210mm; /* عرض A4 به میلی‌متر */
-    height: 297mm; /* ارتفاع A4 به میلی‌متر */
+
     /* Optional: Add some padding if you want content not to touch the very edge */
     /* padding: 10mm; */
     box-sizing: border-box; /* برای اینکه padding در width و height لحاظ شود */
     margin: 0 auto; /* مرکز قرار گرفتن در صفحه در صورت وجود فضای بیشتر */
     page-break-after: always; /* اگر چندین div قرارداد دارید، هر یک را در صفحه جدید چاپ می‌کند */
-    padding: 0;
+    padding: 0 !important;
     transform: scale(0.9);
 }
 
 /* اگر عناصر خاصی در حالت چاپ نیاز به پنهان شدن دارند، اینجا اضافه کنید */
 .no-print {
     display: none !important;
+}
+
+.width{
+    width: 100% !important;
 }

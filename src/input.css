@@ -1,20 +1,20 @@
+/* output.css یا global.css (فایلی که Tailwind آن را پردازش می‌کند) */
+
 @import "tailwindcss";
 
+/* IRANSansX Family */
 @font-face {
     font-family: 'IRANSansX';
-    /* یک نام عمومی برای خانواده فونت */
-    src: url('../assets/fonts/WOFF2/IRANSansX-Regular.woff2') format('woff2');
-    font-weight: 400;
-    /* وزن متناظر با این فایل فونت */
+    src: url('../assets/fonts/WOFF2/IRANSansX-Thin.woff2') format('woff2');
+    font-weight: 100; /* Thin */
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'IRANSansX';
-    src: url('../assets/fonts/WOFF2/IRANSansX-Bold.woff2') format('woff2');
-    font-weight: 700;
-    /* وزن متناظر با این فایل فونت */
+    src: url('../assets/fonts/WOFF2/IRANSansX-UltraLight.woff2') format('woff2');
+    font-weight: 200; /* UltraLight */
     font-style: normal;
     font-display: swap;
 }
@@ -22,51 +22,130 @@
 @font-face {
     font-family: 'IRANSansX';
     src: url('../assets/fonts/WOFF2/IRANSansX-Light.woff2') format('woff2');
-    font-weight: 300;
+    font-weight: 300; /* Light */
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'IRANSansXFaRegularNum';
-    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Regular.woff2') format('woff2');
+    font-weight: 400; /* Regular */
+    font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'IRANSansXFaBoldNum';
-    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Bold.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Medium.woff2') format('woff2');
+    font-weight: 500; /* Medium */
+    font-style: normal;
     font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-DemiBold.woff2') format('woff2');
+    font-weight: 600; /* DemiBold / SemiBold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Bold.woff2') format('woff2');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-ExtraBold.woff2') format('woff2');
+    font-weight: 800; /* ExtraBold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    src: url('../assets/fonts/WOFF2/IRANSansX-Black.woff2') format('woff2');
+    font-weight: 900; /* Black */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* IRANSansXFaNum Family (for Persian numerals) */
+@font-face {
+    font-family: 'IRANSansXFaNum';
+    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Regular.woff2') format('woff2');
+    font-weight: 400; /* Regular for FaNum */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IRANSansXFaNum';
+    src: url('../assets/fonts/WOFF2/IRANSansXFaNum-Bold.woff2') format('woff2');
+    font-weight: 700; /* Bold for FaNum */
+    font-style: normal;
+    font-display: swap;
+}
+
+/* --- Tailwind CSS v4 Configuration --- */
+@config {
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['IRANSansX', 'sans-serif'],
+                    'fa-num': ['IRANSansXFaNum', 'sans-serif'],
+            }
+
+            ,
+            fontWeight: {
+                100: '100',
+                    200: '200',
+                    300: '300',
+                    400: '400',
+                    500: '500',
+                    600: '600',
+                    700: '700',
+                    800: '800',
+                    900: '900',
+
+            }
+        }
+    }
 }
 
 @theme {
     --font-normal: "IRANSansX", "sans-serif";
-
 }
 
 :root {
-
     --font-regular-num: "IRANSansXFaRegularNum";
     --font-bold-num: "IRANSansXFaBoldNum";
 }
 
+body {
+    background-color: #dbdbdb;
+    /* font-family: var(--font-normal);
+    font-weight: 600; */
+    direction: rtl;
+    padding: 10px;
+    overflow: auto;
+}
+
 .fa-num-regular {
     font-family: var(--font-regular-num);
+    font-weight: 400;
+    /* برای اطمینان از اعمال وزن درست */
 }
 
 .fa-num-bold {
     font-family: var(--font-bold-num);
-}
-
-body {
-    background-color: #dbdbdb;
-    font-family: var(--font-normal);
-    direction: rtl;
-
-    padding: 10px;
-    overflow: auto;
+    font-weight: 700;
+    /* برای اطمینان از اعمال وزن درست */
 }
 
 * {
