@@ -1,31 +1,56 @@
 /* print.css */
 
 @page {
-    size: A4; /* تنظیم اندازه صفحه به A4 */
-    margin: 0; /* حذف margin پیش‌فرض صفحه */
+    size: A4;
+    /* تنظیم اندازه صفحه به A4 */
+    margin: 0;
+    /* حذف margin پیش‌فرض صفحه */
 }
 
 body {
-    margin: 0; /* حذف margin از body */
-    padding: 0; /* حذف padding از body */
+    margin: 0;
+    /* حذف margin از body */
+    padding: 0;
+    /* حذف padding از body */
 }
 
 .print-a4-container {
 
     /* Optional: Add some padding if you want content not to touch the very edge */
     /* padding: 10mm; */
-    box-sizing: border-box; /* برای اینکه padding در width و height لحاظ شود */
-    margin: 0 auto; /* مرکز قرار گرفتن در صفحه در صورت وجود فضای بیشتر */
-    page-break-after: always; /* اگر چندین div قرارداد دارید، هر یک را در صفحه جدید چاپ می‌کند */
+    box-sizing: border-box;
+    /* برای اینکه padding در width و height لحاظ شود */
+    margin: 0 auto;
+    /* مرکز قرار گرفتن در صفحه در صورت وجود فضای بیشتر */
+    page-break-after: always;
+    /* اگر چندین div قرارداد دارید، هر یک را در صفحه جدید چاپ می‌کند */
     padding: 0 !important;
     transform: scale(0.9);
 }
+
+.print-a4-container-x {
+    width: 297mm;
+    /* عرض A4 به میلی‌متر */
+    height: 210mm;
+    /* ارتفاع A4 به میلی‌متر */
+    /* Optional: Add some padding if you want content not to touch the very edge */
+    /* padding: 10mm; */
+    box-sizing: border-box;
+    /* برای اینکه padding در width و height لحاظ شود */
+    margin: 0 auto;
+    /* مرکز قرار گرفتن در صفحه در صورت وجود فضای بیشتر */
+    page-break-after: always;
+    /* اگر چندین div قرارداد دارید، هر یک را در صفحه جدید چاپ می‌کند */
+    padding: 0 !important;
+    transform: scale(0.9);
+}
+
 
 /* اگر عناصر خاصی در حالت چاپ نیاز به پنهان شدن دارند، اینجا اضافه کنید */
 .no-print {
     display: none !important;
 }
 
-.width{
+.width {
     width: 100% !important;
 }
